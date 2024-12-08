@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Conan + Build
+CMakeUserPresets.json
+Build/
+src/
+.vs/

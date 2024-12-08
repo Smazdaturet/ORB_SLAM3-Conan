@@ -1,0 +1,18 @@
+diff --git a/components/pango_opengl/CMakeLists.txt b/components/pango_opengl/CMakeLists.txt
+index 5b8da905..70eaa868 100644
+--- a/components/pango_opengl/CMakeLists.txt
++++ b/components/pango_opengl/CMakeLists.txt
+@@ -54,10 +54,10 @@ else()
+         target_compile_definitions(${COMPONENT} PUBLIC HAVE_EPOXY)
+     else()
+         # OpenGL defaults
+-        find_package(OpenGL REQUIRED)
+-        find_package(GLEW REQUIRED)
++        find_package(opengl REQUIRED)
++        find_package(glew REQUIRED)
+         target_include_directories(${COMPONENT} PUBLIC $<BUILD_INTERFACE:${GLEW_INCLUDE_DIR}>)
+-        target_link_libraries(${COMPONENT} PUBLIC ${GLEW_LIBRARY})
++        target_link_libraries(${COMPONENT} PUBLIC GLEW::GLEW)
+         target_link_libraries(${COMPONENT} PUBLIC ${OPENGL_LIBRARIES})
+         target_include_directories(${COMPONENT} PUBLIC $<BUILD_INTERFACE:${OPENGL_INCLUDE_DIR}>)
+         target_compile_definitions(${COMPONENT} PUBLIC HAVE_GLEW)

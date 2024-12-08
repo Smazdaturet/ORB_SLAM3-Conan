@@ -1,0 +1,10 @@
+sources:
+  "0.9.2":
+    url: "https://github.com/stevenlovegrove/Pangolin/archive/refs/tags/v0.9.2.tar.gz"
+  "0.9.1":
+    url: "https://github.com/stevenlovegrove/Pangolin/archive/refs/tags/v0.9.1.tar.gz"
+patches:
+  "0.9.2":
+    - patch_file: "patches/0001-fixGLEWLink.patch"
+      patch_type: "conan"
+      patch_description: "Fix incorrect linking to GLEW"
